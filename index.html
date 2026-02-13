@@ -18,8 +18,9 @@ h1 {
 }
 
 .gallery {
-    column-count: 3;
-    column-gap: 20px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
 }
 
 .item {
@@ -33,20 +34,38 @@ h1 {
     display: block;
 }
 
-.title {
+.item {
+    position: relative;
+    overflow: hidden;
+}
+
+.item img {
+    width: 100%;
+    display: block;
+}
+
+.overlay {
     position: absolute;
-    bottom: 10px;
-    left: 10px;
-    color: white;
-    background: rgba(0,0,0,0.6);
-    padding: 4px 8px;
-    font-size: 14px;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0,0,0,0.35);
+    display: flex;
+    align-items: center;
+    justify-content: center;
     opacity: 0;
     transition: opacity 0.3s ease;
 }
 
-.item:hover .title {
+.item:hover .overlay {
     opacity: 1;
+}
+
+.text {
+    color: white;
+    font-size: 18px;
+    letter-spacing: 1px;
 }
 
 @media (max-width: 900px) {
@@ -90,8 +109,10 @@ h1 {
 </div>
 
 <div class="item">
-  <img src="Festival.jpg">
-  <div class="title">Festival</div>
+  < img src="Festival.jpg">
+  <div class="overlay">
+    <div class="text">Festival</div>
+  </div>
 </div>
 
 <div class="item">
