@@ -47,6 +47,35 @@ h1 {
 .nav-right a {
     margin-left: 25px;
 }
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 220px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    padding: 10px 0;
+}
+
+.dropdown-content a {
+    display: block;
+    padding: 8px 16px;
+    text-decoration: none;
+    color: black;
+}
+
+.dropdown-content a:hover {
+    background-color: #f2f2f2;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
     
 .item {
     position: relative;
@@ -110,7 +139,16 @@ h1 {
   <div class="nav-left">
     <a href="#">Products and Stalls</a>
     <a href="#">Exhibition and publications</a>
-    <a href="#">Illustration</a>
+      
+    <div class="dropdown">
+         <a href="#">Illustration</a>
+         <div class="dropdown-content">
+             <a href="festival.html">Festival</a>
+             <a href="dream.html">Dream of the Red Chamber</a>
+             <a href="highlands.html">Highlands Impression</a>
+             <a href="movies.html">Movies</a>
+           </div>
+         </div>
     <a href="#">Photography</a>
   </div>
 
