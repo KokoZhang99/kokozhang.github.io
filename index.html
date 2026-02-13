@@ -24,6 +24,9 @@ h1 {
 
 .nav {
     margin-bottom: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .nav a {
@@ -37,6 +40,14 @@ h1 {
     text-decoration: underline;
 }
 
+.nav-left a {
+    margin-right: 25px;
+}
+
+.nav-right a {
+    margin-left: 25px;
+}
+    
 .item {
     position: relative;
     margin-bottom: 20px;
@@ -96,11 +107,16 @@ h1 {
 <h1>Koko Zhang</h1>
     
 <div class="nav">
-  <a href="#">Products and Stalls</a>
-  <a href="#">Exhibition and publication</a >
-  <a href="#">Illustration</a>
-  <a href="#">Photography</a>
-  <a href="#">About</a>
+  <div class="nav-left">
+    <a href="#">Products and Stalls</a>
+    <a href="#">Exhibition and publications</a>
+    <a href="#">Illustration</a>
+    <a href="#">Photography</a>
+  </div>
+
+  <div class="nav-right">
+    <a href="#">About</a >
+  </div>
 </div>
     
 <div class="gallery">
